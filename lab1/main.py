@@ -9,7 +9,7 @@ url = "http://localhost:8080/lab1-1.0-SNAPSHOT/process-form"
 threads = 10;
 
 def callWorker():
-    payload = {'key': 'abra432', 'value': '5', 'sync': 'true', 'mock': 'false' }
+    payload = {'key': 'abra432', 'value': '5', 'sync': 'false', 'mock': 'false' }
     payload = parse.urlencode(payload).encode()
     request = Request(url, data=payload)
     response = urlopen(request).read().decode()
