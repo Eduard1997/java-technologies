@@ -1,3 +1,5 @@
+<%@ page import="java.util.List" %>
+<%@ page import="java.io.PrintWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <style>
@@ -47,11 +49,20 @@
 
     <label for="category">Category</label>
     <select id="category" name="category">
+        <%
+            List<String> results = (List<String>) request.getAttribute("categories");
 
+            if(results!=null){
+                for(int i = 0; i < results.size(); i++){
+                    out.println("<option value=" + results.get(i) + ">" + results.get(i) + "</option>");
+                }
+            }
+        %>
     </select>
     <br>
 
     <input type="submit" value="Submit">
 </form>
+
 </body>
 </html>
