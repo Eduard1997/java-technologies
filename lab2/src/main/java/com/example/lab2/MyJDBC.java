@@ -8,14 +8,14 @@ import java.sql.Statement;
 public class MyJDBC {
     public static void main(String[] args) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_db", "root", "Alessandro121");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_db", "root", "ediwebmagnat");
 
             Statement statement = connection.createStatement();
 
-            ResultSet resultSet = statement.executeQuery("select * from test");
+            ResultSet resultSet = statement.executeQuery("select * from categories");
 
             while(resultSet.next()) {
-                System.out.println(resultSet.getString("test_name"));
+                System.out.println(resultSet.getString("name"));
             }
         } catch (Exception e) {
             e.printStackTrace();

@@ -11,6 +11,12 @@
     </properties>
     <root id="archive" name="lab2-1.0-SNAPSHOT.war">
       <element id="artifact" artifact-name="lab2:war exploded" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.26.jar" />
+          <element id="library" level="project" name="mysql.connector.java" />
+        </element>
+      </element>
     </root>
   </artifact>
 </component>

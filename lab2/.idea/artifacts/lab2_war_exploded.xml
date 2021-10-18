@@ -13,12 +13,17 @@
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="lab2" />
+          <element id="extracted-dir" path="$PROJECT_DIR$/lib/mysql-connector-java-8.0.26.jar" path-in-jar="/" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="artifact" artifact-name="mysql-connector-java-8_0_26_jar" />
         </element>
       </element>
       <element id="directory" name="META-INF">
         <element id="file-copy" path="$PROJECT_DIR$/target/lab2-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="lab2/web/Web" />
+      <element id="library" level="project" name="mysql.connector.java" />
     </root>
   </artifact>
 </component>

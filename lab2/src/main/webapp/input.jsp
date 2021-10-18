@@ -35,6 +35,7 @@
     <title>Input</title>
 </head>
 <body>
+
 <form style="margin-left: 100px;">
     <label for="key">Key</label>
     <input type="text" id="key" name="key" placeholder="key">
@@ -44,7 +45,7 @@
     <input type="text" id="value" name="value" placeholder="value">
     <br>
 
-    <label for="category">Country</label>
+    <label for="category">Category</label>
     <select id="category" name="category">
 
     </select>
