@@ -38,7 +38,7 @@
 </head>
 <body>
 
-<form style="margin-left: 100px;">
+<form style="margin-left: 100px;" action="process-form" method="post">
     <label for="key">Key</label>
     <input type="text" id="key" name="key" placeholder="key">
     <br>

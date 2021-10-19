@@ -8,7 +8,7 @@ import java.sql.Statement;
 public class MyJDBC {
     public static void main(String[] args) {
         try {
-            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_db", "root", "ediwebmagnat");
+            Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/java_db", "root", "root");
 
             Statement statement = connection.createStatement();
 

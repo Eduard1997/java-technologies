@@ -23,8 +23,6 @@ public class Controller extends HttpServlet {
 
     public void init() throws ServletException {
 
-
-
     }
 
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {

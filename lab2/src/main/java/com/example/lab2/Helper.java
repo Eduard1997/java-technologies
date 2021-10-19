@@ -7,7 +7,7 @@ public class Helper {
     public static Connection getDbConnection() {
         String url = "jdbc:mysql://localhost:3306/java_db?useSSL=false";
         String username = "root";
-        String password = "ediwebmagnat";
+        String password = "root";
         Connection connection = null;
         try {
             Class.forName("com.mysql.jdbc.Driver").newInstance();
