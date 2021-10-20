@@ -1,6 +1,7 @@
 package com.example.lab2;
 
 import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -28,6 +29,8 @@ public class Controller extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
 
         try {
+            ServletContext c = this.getServletContext();
+
             CategoriesModel categoriesModel = new CategoriesModel();
             List<String> categoriesData = categoriesModel.getCategories();
             request.setAttribute("categories", categoriesData);

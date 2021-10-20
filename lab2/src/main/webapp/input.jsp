@@ -1,5 +1,6 @@
 <%@ page import="java.util.List" %>
 <%@ page import="java.io.PrintWriter" %>
+<%@ page import="java.util.Objects" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <style>
@@ -53,8 +54,21 @@
             List<String> results = (List<String>) request.getAttribute("categories");
 
             if(results!=null){
+                Cookie cookie = null;
+                Cookie[] cookies = null;
+
+                // Get an array of Cookies associated with the this domain
+                cookies = request.getCookies();
                 for(int i = 0; i < results.size(); i++){
-                    out.println("<option value=" + results.get(i) + ">" + results.get(i) + "</option>");
+                    if(cookies != null) {
+                        if(Objects.equals(results.get(i), cookies[1].getValue()) || Objects.equals(results.get(i), cookies[0].getValue())) {
+                            out.println("<option value=" + results.get(i) + " selected >" + results.get(i) + "</option>");
+                        } else {
+                            out.println("<option value=" + results.get(i) + ">" + results.get(i) + "</option>");
+                        }
+                    } else {
+                        out.println("<option value=" + results.get(i) + ">" + results.get(i) + "</option>");
+                    }
                 }
             }
         %>
@@ -62,6 +76,7 @@
     <br>
 
     <input type="submit" value="Submit">
+    
 </form>
 
 </body>
